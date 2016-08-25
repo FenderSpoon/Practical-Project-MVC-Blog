@@ -30,5 +30,7 @@ namespace MVC_Blog.Models
 
         
         public ApplicationUser Author { get; set; }
+
+        public ICollection<Comment> Comments { get; set; }
     }
 }
