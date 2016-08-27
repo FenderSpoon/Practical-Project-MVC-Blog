@@ -1,14 +1,8 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    background-image: url('BgImage/Cover.jpg');
-    background-size: 42%; /* size the background image at 100% like any responsive img tag */
-    background-position:right top;
-    background-repeat:no-repeat;
-    
-
+   
 }
-
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
@@ -53,7 +47,8 @@ hidden;
 hidden.banner
 background-attachment:
 scroll;
-background-clip:border-box;
+background-clip:
+border-box;
 initial.banner
 background-color:
 rgba(0, 0, 0, 0);
@@ -61,39 +56,34 @@ background-image:
 linear-gradient(to right, rgb(123, 67, 151) 0%, rgb(181, 35, 138) 59%, rgb(220, 36, 48) 87%);
 background-origin:
 padding-box;
-background-size:auto;
-box-sizing:border-box;
-color:rgb(0, 0, 0);
-display:block;
-filter:none;
+background-size:
+auto;
+box-sizing:
+border-box;
+color:
+rgb(0, 0, 0);
+display:
+block;
+filter:
+none;
 font-family:'Times New Roman', Times, serif;
-font-size:12px;
-font-style:normal;
-font-weight:normal;
-height:54px;
-line-height:18px;
-min-width:320px;
-position:relative;
-width:1345px;
+font-size:
+12px;
+font-style:
+normal;
+font-weight:
+normal;
+height:
+54px;
+line-height:
+18px;
+min-width:
+320px;
+position:
+relative;
+width:
+1345px;
 z-index:1400;
-}
-
-.drawing-up {
-    display: inline-block;
-    cursor: pointer;
-    color:#ffd800;
-    padding: 13px 21px 14px;
-    text-decoration: none;
-    transition: all 0.9s ease-in-out;
-    font: 14px Arial;
-    opacity: 0.57;
-    margin-top: 1px;
-}
-.post>footer{
-   
-     position:fixed;
-     margin-toop:25px;
-    
 }
 
 
