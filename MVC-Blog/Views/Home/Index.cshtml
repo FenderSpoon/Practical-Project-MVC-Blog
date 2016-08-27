@@ -5,9 +5,33 @@
 
 @model List<MVC_Blog.Models.Post>
 <section class="row">
+    <div class="site_up">
+        <div class="site_up_menu2">
+            <div class="site_up_menu2_all">
+                <div class="site_up_menu2_drawing"><a href="http://www.inkedone.com" target="_blank" class="drawing-up" title="Drawing Art Gallery">DRAW AND SKETCH</a></div>
+                
+            </div>
+        </div>
+        <div class="site_up_heading">
+            <div class="site_up_heading_text_all">
+                <div class="site_up_heading_text">
+                </div>
+            </div>
+        </div>
+        <div class="menu_svg">
+            
+            <div class="menu_social_svg_all">
+                <div class="menu_social_svg">
+                    <div class="up_svg"></a><a href="https://www.facebook.com/World-Tattoo-Gallery" title="Follow us on Facebook" target="_blank"><img src="~/Images/facebook.jpg" /></a><a href="https://www.pinterest.com/wtattoogallery/pins" title="Follow us on Pinterest" target="_blank"><img src="http://www.worldtattoogallery.com/web-templates/svg/pinterest.svg" alt="pinterepst" class="up_svg"></a><a href="https://plus.google.com/100706222095919368577" title="World Tattoo Gallery on Google Plus" target="_blank"><img src="http://www.worldtattoogallery.com/web-templates/svg/google-plus.svg" alt="google plus" class="up_svg"></a><a href="https://www.instagram.com/worldtattoogallery" title="World Tattoo Gallery on Instagram" target="_blank"><img src="http://www.worldtattoogallery.com/web-templates/svg/instagram.svg" alt="instagram" class="up_svg"></a><a href="http://worldtattoogallery.tumblr.com/" title="Follow us on Tumblr" target="_blank"><img src="http://www.worldtattoogallery.com/web-templates/svg/tumblr.svg" alt="tumblr" class="up_svg"></a><div class="up_svg_none2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     @foreach (var post in Model)
 
     {
+
         <article class="post col-md-6">
             <h2 class="title">@post.Title</h2>
             <div class="about">

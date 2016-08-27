@@ -1,6 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+   
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -31,3 +32,59 @@ textarea {
     margin:0;
     padding:5px;
 }
+.menu_svg{
+  display:run-in;
+     padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+.site_up_menu2_drawing{
+    background-image:
+Show all
+backface-visibility:
+hidden;
+    padding-left:65px;
+hidden.banner
+background-attachment:
+scroll;
+background-clip:
+border-box;
+initial.banner
+background-color:
+rgba(0, 0, 0, 0);
+background-image:
+linear-gradient(to right, rgb(123, 67, 151) 0%, rgb(181, 35, 138) 59%, rgb(220, 36, 48) 87%);
+background-origin:
+padding-box;
+background-size:
+auto;
+box-sizing:
+border-box;
+color:
+rgb(0, 0, 0);
+display:
+block;
+filter:
+none;
+font-family:'Times New Roman', Times, serif;
+font-size:
+12px;
+font-style:
+normal;
+font-weight:
+normal;
+height:
+54px;
+line-height:
+18px;
+min-width:
+320px;
+position:
+relative;
+width:
+1345px;
+z-index:1400;
+}
+
+
+

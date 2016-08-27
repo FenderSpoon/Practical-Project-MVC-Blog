@@ -759,8 +759,9 @@ pre code {
 .container {
   padding-right: 15px;
   padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+  margin-right:unset;
+  margin-left:unset;
+
 }
 
 .container:before,
@@ -6813,4 +6814,21 @@ td.visible-print {
   td.hidden-print {
     display: none !important;
   }
+  button {
+	background:#0099ff;
+}
+
+button:hover {
+	background:#ff0000;
+}
+
+OR
+
+input[type="submit"] {
+	background:#0099ff;
+}
+
+input[type="submit"]:hover {
+	background:#ff0000;
+}
 }
