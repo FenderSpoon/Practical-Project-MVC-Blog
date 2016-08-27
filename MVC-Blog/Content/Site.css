@@ -1,7 +1,11 @@
 ﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
-   
+     padding-top: 50px;
+     padding-bottom: 20px;
+    
+     background-image: url('BgImage/Cover.jpg');
+     background-size: 42%; /* size the background image at 100% like any responsive img tag */
+     background-position:right top;
+     background-repeat:no-repeat;
 }
 
 /* Set padding to keep content from hitting the edges */
