@@ -8,6 +8,7 @@ namespace MVC_Blog
     {
         public void Configuration(IAppBuilder app)
         {
+           
             ConfigureAuth(app);
         }
     }
