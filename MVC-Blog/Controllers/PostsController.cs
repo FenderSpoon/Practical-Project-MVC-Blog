@@ -21,7 +21,7 @@ namespace MVC_Blog.Controllers
         {
             var postWithAuthors =
                 db.Posts
-                .Include(p => p.Author)
+                .Include(p => p.Author).Include(p => p.Comments)
                 .ToList();
             return View(postWithAuthors);
         }
@@ -83,6 +83,7 @@ namespace MVC_Blog.Controllers
             return View(post);
         }
 
+
         // POST: Posts/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -126,6 +127,36 @@ namespace MVC_Blog.Controllers
             db.Posts.Remove(post);
             db.SaveChanges();
             return RedirectToAction("Index");
+        }
+
+
+        public ActionResult ViewController()
+        {
+            BigModel bigModel = new BigModel(); //This is New
+                                            
+            return View(bigModel);
+        }
+
+        public ActionResult CreateComment()
+        {
+            return View();
+        }
+
+        // POST: Comments/Create
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create([Bind(Include = "Id,Text")] Comment comment)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Comments.Add(comment);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            return View(comment);
         }
 
         protected override void Dispose(bool disposing)

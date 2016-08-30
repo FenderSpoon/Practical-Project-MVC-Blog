@@ -1,12 +1,15 @@
 ﻿@model IEnumerable<Post>
+
+
 @using MVC_Blog.Classes;
 @using MVC_Blog.Models;
+
 
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Posts</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -14,10 +17,13 @@
 <table class="table">
     <tr>
         <th>
-           Title
+            Title
         </th>
         <th>
             Content
+        </th>
+        <th>
+        Comments
         </th>
         <th>
             Date
@@ -30,34 +36,53 @@
         </th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Title)
-        </td>
-        <td>
-            @Utils.CutText(item.Body)
-        </td>
-        
-        <td>
-            @Html.DisplayFor(modelItem => item.Date)
-        </td>
-        <td>
-            @if (item.Author != null)
-            {
-                @item.Author.UserName
-            }else
-            {
-               @:(Unknown)
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Utils.CutText(item.Body)
+            </td>
+            <td>
+            
+                @Html.DisplayFor(modelItem => item.Comments)
+            
+                
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @if (item.Author != null)
+                {
+                    @item.Author.UserName
+                }
+                else
+                {
+                    @:(Unknown)
             }
 
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id }) |
+                @Html.ActionLink("Comments", "Index", "Comments")
+            </td>
+        </tr>
+        <tr>
+            
+            </tr>
+            <tr>
+                <td>
+                   
+                   
+                </td>
+
+            </tr>
+    }
 
 </table>
