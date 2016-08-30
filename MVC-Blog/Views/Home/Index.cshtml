@@ -1,64 +1,69 @@
-﻿@model IEnumerable<MVC_Blog.Models.Post>
-
-
-
-
-@{
-    ViewBag.Title = "Home-Page";
-   
+﻿@{
+    ViewBag.Title = "Home Page";
 }
 
 
-<div style="font-family:Arial">
+@model List<MVC_Blog.Models.Post>
+<section class="row">
+    <div class="site_up">
+        <div class="site_up_menu2">
+            <div class="site_up_menu2_all">
+                <div class="site_up_menu2_drawing"><a href="http://www.inkedone.com" target="_blank" class="drawing-up" title="Drawing Art Gallery">DRAW AND SKETCH</a></div>
+                
+            </div>
+        </div>
+        <div class="site_up_heading">
+            <div class="site_up_heading_text_all">
+                <div class="site_up_heading_text">
+                </div>
+            </div>
+        </div>
+        <div class="menu_svg">
+            
+            <div class="menu_social_svg_all">
+                <div class="menu_social_svg">
+                    <div class="up_svg"></a><a href="https://www.facebook.com/World-Tattoo-Gallery" title="Follow us on Facebook" target="_blank"><img src="~/Images/facebook.jpg" /></a>
+                    <a href="https://www.pinterest.com/wtattoogallery/pins" title="Follow us on Pinterest" target="_blank"><img src="~/Images/pinterest.jpg" /></a>
+                    <a href="https://plus.google.com/100706222095919368577" title="World Tattoo Gallery on Google Plus" target="_blank"><img src="~/Images/google-plus.jpg" /></a>
+                    <a href="https://www.instagram.com/worldtattoogallery" title="World Tattoo Gallery on Instagram" target="_blank"><img src="~/Images/instagram.jpg" /></a>
+                    </div>
+                    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="site_up_heading">
+        <div class="site_up_heading_text_all">
+            <div class="site_up_heading_text">
+            </div>
+        </div>
+    </div>
 
-    <p>
-        @Html.ActionLink("Create New", "Create")
-    </p>
+ 
+   
 
+    @foreach (var post in Model)
 
-    <p>
-        @using (Html.BeginForm("Index","Home",FormMethod.Get))
-        {
-            <b>SearchBy</b>@Html.RadioButton("searchBy", "Title",true)<text>Name</text>
-            @Html.RadioButton("searchBy", "Body")<text>Tags</text><br />
-            @Html.TextBox("search")<input type="submit" value="Search" />
-        }
+    {
 
-    </p>
-    <table class="table">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Title)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Body)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Date)
-            </th>
-            <th></th>
-        </tr>
-        @if (Model.Count() == 0)
-        {
-            <tr>
-                <td colspas="4">No rows match search criteria</td>
-            </tr>
-        }
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Title)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Body)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Date)
-                </td>
+        <article class="post col-md-6">
+            <h2 class="title">@post.Title</h2>
+            <div class="about">
+                Published 
+                @if (post.Author != null)
+                    {
+                    @:by
+                    <i>@post.Author.FullName (@post.Author.UserName)</i>
+                }
+                
+                at <i>@post.Date</i>
+            </div>
+            <div class="body">@Html.Raw(post.Body)</div>
               
-            </tr>
-        }
+             
+            </article>
+            }
 
-    </table>
-</div>
+
+</section>

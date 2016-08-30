@@ -16,5 +16,6 @@ namespace MVC_Blog.Controllers
             return View(post.ToList());
         }
 
+
     }
 }

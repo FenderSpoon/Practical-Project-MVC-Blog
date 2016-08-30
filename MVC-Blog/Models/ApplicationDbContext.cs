@@ -23,5 +23,7 @@ namespace MVC_Blog.Models
         {
             return new ApplicationDbContext();
         }
+
+
     }
 }
