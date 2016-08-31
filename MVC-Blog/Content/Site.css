@@ -1,7 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    
+    color:#ba04c4;
     
 
 }
@@ -31,14 +31,13 @@ textarea {
     margin-top:15px;
 }
 .post>h2, .post>div {
-    background : #DDD;
+    background :#fbf3f3;
     margin:0;
     padding:5px;
 }
 .menu_svg{
   display:run-in;
-     padding-top: 10px;
-    padding-bottom: 10px;
+    
     
 }
 .site_up_menu2_drawing{
@@ -92,6 +91,12 @@ z-index:1400;
      margin-toop:25px;
     
 }
-
+.navbar-inverse .navbar-nav > li > a {
+    color: #db1042;
+    transition: all 0.9s ease-in-out;
+    font: 14px Arial;
+    opacity: 0.67;
+    margin-top: 1px;
+}
 
 

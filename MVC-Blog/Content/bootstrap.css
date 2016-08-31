@@ -4507,7 +4507,11 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-inverse .navbar-brand {
-  color: #999999;
+  color: #db1042;
+    transition: all 0.9s ease-in-out;
+    font: 14px Arial;
+    opacity: 0.67;
+    margin-top: 1px;
 }
 
 .navbar-inverse .navbar-brand:hover,

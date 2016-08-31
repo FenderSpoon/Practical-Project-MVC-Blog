@@ -8,8 +8,17 @@
     <div class="site_up">
         <div class="site_up_menu2">
             <div class="site_up_menu2_all">
-                <div class="site_up_menu2_drawing"><a href="http://www.inkedone.com" target="_blank" class="drawing-up" title="Drawing Art Gallery">DRAW AND SKETCH</a></div>
-                
+                <div class="site_up_menu2_drawing"></div><p>
+    @using (Html.BeginForm("Index", "Home", FormMethod.Get))
+    {
+        <b>Search By </b> @Html.RadioButton("searchBy", " Post",true)<text> Post</text>
+        @Html.RadioButton("searchBy", "Tags")<text> Tags</text><br />
+                        @Html.TextBox("search")<input type="submit" value="Search" />
+    }
+</p>
+
+
+               
             </div>
         </div>
         <div class="site_up_heading">
@@ -18,20 +27,7 @@
                 </div>
             </div>
         </div>
-        <div class="menu_svg">
-            
-            <div class="menu_social_svg_all">
-                <div class="menu_social_svg">
-                    <div class="up_svg"></a><a href="https://www.facebook.com/World-Tattoo-Gallery" title="Follow us on Facebook" target="_blank"><img src="~/Images/facebook.jpg" /></a>
-                    <a href="https://www.pinterest.com/wtattoogallery/pins" title="Follow us on Pinterest" target="_blank"><img src="~/Images/pinterest.jpg" /></a>
-                    <a href="https://plus.google.com/100706222095919368577" title="World Tattoo Gallery on Google Plus" target="_blank"><img src="~/Images/google-plus.jpg" /></a>
-                    <a href="https://www.instagram.com/worldtattoogallery" title="World Tattoo Gallery on Instagram" target="_blank"><img src="~/Images/instagram.jpg" /></a>
-                    </div>
-                    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
-                    
-                </div>
-            </div>
-        </div>
+       
     </div>
     <div class="site_up_heading">
         <div class="site_up_heading_text_all">
@@ -52,7 +48,7 @@
             <div class="about">
                 Published 
                 @if (post.Author != null)
-                    {
+                {
                     @:by
                     <i>@post.Author.FullName (@post.Author.UserName)</i>
                 }
@@ -63,7 +59,7 @@
               
              
             </article>
-            }
+        }
 
 
 </section>
