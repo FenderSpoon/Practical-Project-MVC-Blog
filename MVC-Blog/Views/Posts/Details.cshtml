@@ -23,22 +23,27 @@
         </dt>
 
         <dd>
-            <textarea disabled="disabled" rows="20" class="form-control text-box multiline ">@Model.Body
-            </textarea>
-            
-        </dd>
+            <textarea disabled="disabled" rows="20" class="form-control text-box multiline ">
+                @Model.Body
+        </textarea>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Date)
-        </dt>
+    </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Date)
-        </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.Date)
+    </dt>
 
-    </dl>
+    <dd>
+        @Html.DisplayFor(model => model.Date)
+    </dd>
+
+</dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @if (User.IsInRole("Administrators"))
+    {
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) @:|
+                }
+
     @Html.ActionLink("Back to List", "Index")
 </p>

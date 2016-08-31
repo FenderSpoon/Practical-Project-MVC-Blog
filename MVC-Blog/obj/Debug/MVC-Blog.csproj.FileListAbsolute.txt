@@ -570,3 +570,4 @@ C:\Users\admin\Desktop\test\MVC-Blog\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\admin\Desktop\test\MVC-Blog\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\admin\Desktop\test\MVC-Blog\obj\Debug\MVC-Blog.dll
 C:\Users\admin\Desktop\test\MVC-Blog\obj\Debug\MVC-Blog.pdb
+C:\Users\Chorkata\Documents\GitHub\Practical-Project-MVC-Blog\MVC-Blog\obj\Debug\MVC-Blog.csprojResolveAssemblyReference.cache

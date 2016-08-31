@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<Post>
 
-
+@using Microsoft.AspNet.Identity;
 @using MVC_Blog.Classes;
 @using MVC_Blog.Models;
 
@@ -58,7 +58,7 @@
             <td>
                 @if (item.Author != null)
                 {
-                    @item.Author.UserName
+                    @item.Author.FullName
                 }
                 else
                 {
@@ -67,10 +67,20 @@
 
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.Id }) |
+                @if (User.IsInRole("Administrators"))
+                {
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) @:|
+                }
+
+                @Html.ActionLink("Details", "Details", new { id = item.Id })
+
                 @Html.ActionLink("Comments", "Index", "Comments")
+                @if (User.IsInRole("Administrators"))
+                {
+                  @:|  @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                }
+                
+                
             </td>
         </tr>
         <tr>
