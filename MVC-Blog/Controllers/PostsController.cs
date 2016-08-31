@@ -137,27 +137,27 @@ namespace MVC_Blog.Controllers
             return View(bigModel);
         }
 
-        public ActionResult CreateComment()
-        {
-            return View();
-        }
+        //public ActionResult CreateComment()
+        //{
+        //    return View();
+        //}
 
-        // POST: Comments/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Text")] Comment comment)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Comments.Add(comment);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
+        //// POST: Comments/Create
+        //// To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        //// more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult Create([Bind(Include = "Id,Text")] Comment comment)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        db.Comments.Add(comment);
+        //        db.SaveChanges();
+        //        return RedirectToAction("Index");
+        //    }
 
-            return View(comment);
-        }
+        //    return View(comment);
+        //}
 
         protected override void Dispose(bool disposing)
         {

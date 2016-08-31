@@ -69,8 +69,8 @@ font-weight:normal;
 height:54px;
 line-height:18px;
 min-width:320px;
-position:relative;
-width:1345px;
+position:unset;
+width:1268.5px;
 z-index:1400;
 }
 
@@ -97,6 +97,9 @@ z-index:1400;
     font: 14px Arial;
     opacity: 0.67;
     margin-top: 1px;
+    
 }
 
-
+.up_svg{
+    margin-left:50%;
+}

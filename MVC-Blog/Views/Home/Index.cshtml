@@ -15,10 +15,7 @@
         @Html.RadioButton("searchBy", "Tags")<text> Tags</text><br />
                         @Html.TextBox("search")<input type="submit" value="Search" />
     }
-</p>
 
-
-               
             </div>
         </div>
         <div class="site_up_heading">
@@ -27,17 +24,22 @@
                 </div>
             </div>
         </div>
-       
     </div>
     <div class="site_up_heading">
         <div class="site_up_heading_text_all">
             <div class="site_up_heading_text">
             </div>
         </div>
-    </div>
-
+        <p><strong> Tags : </strong><a href="http://localhost:53214/Posts/Details/2" title="Read more" target="_blank">Windows 10</a> | <a href="http://localhost:53214/Posts/Details/8" sl-processed="1">C#</a> | <a href="http://localhost:53214/Posts/Details/9" sl-processed="1">Java</a> | <a href="http://localhost:53214/Posts/Details/10" sl-processed="1">JavaScript</a> | <a href="http://localhost:53214/Posts/Details/11" sl-processed="1">PHP</a> | </p>
  
-   
+
+        <TABLE   BORDER=1 CELLSPACING=1 CELLPADDING=1>
+            <TR>
+                <TD   BGCOLOR="#fbf3f3">
+                    LATEST POSTS
+                </TD>
+            </TR>
+        </TABLE>
 
     @foreach (var post in Model)
 
